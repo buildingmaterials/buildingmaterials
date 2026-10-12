@@ -1,0 +1,3 @@
+export default function FloatingActions() {
+  return <div className="floating-actions"><a className="float-button whatsapp-float" href="https://wa.me/919799857998?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20building%20materials%20and%20products." target="_blank" rel="noreferrer" aria-label="Chat with Kanak Building and Materials on WhatsApp"><span>◉</span><b>WhatsApp</b></a><a className="float-button flashh-float" href="https://app.flashh.ai/" target="_blank" rel="noreferrer" aria-label="Visit Flashh.ai"><img src="/flashh-logo.png" alt="Flashh.ai" /></a></div>;
+}
