@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export default function ImageWithFallback({ src, alt, className = '', fallbackLabel = 'Image unavailable' }) {
+export default function ImageWithFallback({ src, alt, className = '', fallbackLabel = 'Image unavailable', position }) {
   const [failed, setFailed] = useState(false);
   const ref = useRef(null);
 
@@ -20,5 +20,5 @@ export default function ImageWithFallback({ src, alt, className = '', fallbackLa
     </div>;
   }
 
-  return <img ref={ref} className={className} src={src} alt={alt} onError={() => setFailed(true)} />;
+  return <img ref={ref} className={className} src={src} alt={alt} loading="lazy" style={position ? { objectPosition: position } : undefined} onError={() => setFailed(true)} />;
 }

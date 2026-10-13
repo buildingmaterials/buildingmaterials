@@ -4,7 +4,7 @@ export default function ProductCard({ product }) {
   const message = encodeURIComponent(`Hello, I would like to enquire about ${product.title} from Kanak Building and Materials.`);
   return <article className="product-card">
     <div className="product-image">
-      <ImageWithFallback src={product.image} alt={product.alt} fallbackLabel={product.fallbackLabel} />
+      <ImageWithFallback src={product.image} alt={product.alt} fallbackLabel={product.fallbackLabel} position={product.position} />
       {product.brand && <span className="jk-badge" aria-label="JK Cement product">JK <small>CEMENT</small></span>}
       <span className="product-tag">{product.tag}</span>
     </div>
