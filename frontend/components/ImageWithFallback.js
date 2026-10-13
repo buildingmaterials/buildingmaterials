@@ -1,9 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ImageWithFallback({ src, alt, className = '', fallbackLabel = 'Image unavailable' }) {
   const [failed, setFailed] = useState(false);
+  const ref = useRef(null);
+
+  // The browser may report a load error before React attaches onError,
+  // so also check the image after mount.
+  useEffect(() => {
+    setFailed(false);
+    const img = ref.current;
+    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+  }, [src]);
 
   if (failed) {
     return <div className={`image-fallback ${className}`} role="img" aria-label={alt}>
@@ -11,5 +20,5 @@ export default function ImageWithFallback({ src, alt, className = '', fallbackLa
     </div>;
   }
 
-  return <img className={className} src={src} alt={alt} onError={() => setFailed(true)} />;
+  return <img ref={ref} className={className} src={src} alt={alt} onError={() => setFailed(true)} />;
 }
