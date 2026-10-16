@@ -211,3 +211,103 @@ html[data-theme='dark'] .menu-button {
     background: #202c3a;
   }
 }
+
+.about-photo {
+  position: relative;
+}
+
+.about-photo > img {
+  object-position: center 34%;
+}
+
+.owner-photo-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  color: #fff;
+  background: rgba(18, 35, 61, .88);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delivery-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 150px)) minmax(180px, 260px) minmax(220px, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.delivery-vehicle {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 14px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--navy);
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delivery-vehicle img {
+  width: 100%;
+  height: 76px;
+  object-fit: contain;
+}
+
+.delivery-real-photo {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.delivery-real-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.delivery-copy h3 {
+  margin: 0;
+  font: 600 20px 'Space Grotesk';
+}
+
+.delivery-copy p {
+  margin: 7px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+html[data-theme='dark'] .delivery-vehicle {
+  color: var(--navy);
+  background: #202c3a;
+}
+
+@media (max-width: 900px) {
+  .delivery-showcase {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .delivery-real-photo,
+  .delivery-copy {
+    grid-column: span 2;
+  }
+
+  .delivery-real-photo {
+    height: 220px;
+  }
+}
+
+@media (max-width: 450px) {
+  .delivery-showcase {
+    gap: 12px;
+  }
+
+  .delivery-real-photo {
+    height: 180px;
+  }
+}

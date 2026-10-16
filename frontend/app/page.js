@@ -27,8 +27,8 @@ export default function HomePage() {
             <div className="hero-proof"><strong>4+</strong><span>{t('years of')}<br />{t('local experience')}</span><i></i><strong>{t('Tractor & tempo')}</strong><span>{t('site delivery')}<br />{t('available locally')}</span></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-wrap"><ImageWithFallback src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85" alt={t('Modern building under construction')} fallbackLabel={t('Kanak Building Materials')} /></div>
-            <div className="hero-badge"><span className="badge-icon">✓</span><div><strong>{t('Reliable quality')}</strong><small>{t('For every project')}</small></div></div>
+            <div className="hero-image-wrap"><ImageWithFallback src="/delivery/tempo-loaded-stock.png" alt={t('Building materials being loaded for local delivery')} fallbackLabel={t('Kanak Building Materials')} /></div>
+            <div className="hero-badge"><span className="badge-icon">✓</span><div><strong>{t('Local delivery')}</strong><small>{t('Tractor and tempo options')}</small></div></div>
             <div className="orange-slash"></div>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function HomePage() {
 
       <section className="section"><div className="container"><div className="section-heading"><div><span className="eyebrow">{t('What we supply')}</span><h2>{t('Everything you need to')} <em>{t('build')}</em></h2></div><Link className="text-link" href="/services">{t('View all products')} <span>→</span></Link></div><div className="product-grid home-products">{products.filter((product) => product.featured).map((product) => <ProductCard key={product.title} product={product} />)}</div></div></section>
 
-      <section className="story-band"><div className="container story-grid"><div className="story-image"><ImageWithFallback src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt={t('Construction professionals working on a building project')} fallbackLabel={t('Project planning')} /></div><div className="story-copy"><span className="eyebrow">{t('Why Kanak Building and Materials')}</span><h2>{t('A trusted name for every')} <em>{t('foundation')}</em></h2><p>{t('From a home renovation to a major construction project, we help homeowners, builders and contractors find the right materials with honest guidance and reliable service.')}</p><Link className="button button-dark" href="/about">{t('Our story')} <span>→</span></Link></div></div></section>
+      <section className="story-band"><div className="container story-grid"><div className="story-image"><ImageWithFallback src="/products/patel-pvc-pipes.jpg" alt={t('Patel PVC pipe stock at the Kanak shop')} fallbackLabel={t('Plumbing supplies')} /></div><div className="story-copy"><span className="eyebrow">{t('Why Kanak Building and Materials')}</span><h2>{t('A trusted name for every')} <em>{t('foundation')}</em></h2><p>{t('From a home renovation to a major construction project, we help homeowners, builders and contractors find the right materials with honest guidance and reliable service.')}</p><Link className="button button-dark" href="/about">{t('Our story')} <span>→</span></Link></div></div></section>
       <ReviewsSection />
       <section className="cta-band"><div className="container cta-content"><div><span className="eyebrow light">{t('Have a project in mind?')}</span><h2>{t('Let’s get your materials sorted.')}</h2></div><Link className="button button-light" href="/contact">{t('Send an enquiry')} <span>→</span></Link></div></section>
     </>
