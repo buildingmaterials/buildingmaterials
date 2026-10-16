@@ -1,3 +1,7 @@
+'use client';
+
+import { useSitePreferences } from './SitePreferences';
+
 function WhatsAppLogo() {
   return <svg className="whatsapp-logo" viewBox="0 0 32 32" aria-hidden="true">
     <circle cx="16" cy="16" r="15" fill="currentColor" />
@@ -6,8 +10,11 @@ function WhatsAppLogo() {
 }
 
 export default function FloatingActions() {
+  const { language, t } = useSitePreferences();
+  const greeting = language === 'hi'
+    ? 'नमस्ते, मैं आपके निर्माण सामग्री और उत्पादों के बारे में पूछताछ करना चाहता/चाहती हूँ।'
+    : 'Hello, I would like to enquire about your building materials and products.';
   return <div className="floating-actions">
-    <a className="float-button flashh-float" href="https://app.flashh.ai/" target="_blank" rel="noreferrer" aria-label="Visit Flashh.ai"><img src="/flashh-logo.png" alt="Flashh.ai" /></a>
-    <a className="float-button whatsapp-float" href="https://wa.me/919799857998?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20building%20materials%20and%20products." target="_blank" rel="noreferrer" aria-label="Chat with Kanak Building and Materials on WhatsApp"><WhatsAppLogo /><b>WhatsApp</b></a>
+    <a className="float-button whatsapp-float" href={`https://wa.me/919799857998?text=${encodeURIComponent(greeting)}`} target="_blank" rel="noreferrer" aria-label={t('Chat with Kanak Building and Materials on WhatsApp')}><WhatsAppLogo /><b>{t('WhatsApp')}</b></a>
   </div>;
 }

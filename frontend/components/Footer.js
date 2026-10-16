@@ -1,5 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { useSitePreferences } from './SitePreferences';
 
 export default function Footer() {
-  return <footer className="site-footer"><div className="container footer-grid"><div><Link className="brand footer-brand" href="/"><span className="brand-mark">K</span><span><strong>KANAK</strong><small>BUILDING &amp; MATERIALS</small></span></Link><p className="footer-intro">Your trusted local partner for quality construction materials and dependable service.</p></div><div><h4>Explore</h4><Link href="/">Home</Link><Link href="/services">Products &amp; services</Link><Link href="/about">About us</Link><Link href="/contact">Contact</Link></div><div><h4>Get in touch</h4><a href="tel:+919799857998">+91 97998 57998</a><a href="mailto:digvijaysinghrathore5232@gmail.com">Email us</a><span>VPO Kunda, Tehsil Semari,<br />Salumber, Rajasthan</span></div><div><h4>Quick enquiry</h4><p>Need a quote or product information?</p><a className="footer-whatsapp" href="https://wa.me/919799857998" target="_blank" rel="noreferrer">Chat on WhatsApp ↗</a></div></div><div className="container footer-bottom"><span>© 2026 Kanak Building and Materials. All Rights Reserved.</span><a href="https://app.flashh.ai/" target="_blank" rel="noreferrer">Powered by <strong>Flashh.ai</strong></a></div></footer>;
+  const { t } = useSitePreferences();
+  return <footer className="site-footer">
+    <div className="container footer-grid">
+      <div>
+        <Link className="brand footer-brand" href="/">
+          <img className="brand-mark" src="/kanak-mark.svg" alt="" />
+          <span><strong>KANAK</strong><small>{t('BUILDING & MATERIALS')}</small></span>
+        </Link>
+        <p className="footer-intro">{t('Your trusted local partner for quality construction materials and dependable service.')}</p>
+      </div>
+      <div><h4>{t('Explore')}</h4><Link href="/">{t('Home')}</Link><Link href="/services">{t('Products & services')}</Link><Link href="/about">{t('About us')}</Link><Link href="/contact">{t('Contact')}</Link></div>
+      <div><h4>{t('Get in touch')}</h4><a href="tel:+919799857998">+91 97998 57998</a><a href="mailto:digvijaysinghrathore5232@gmail.com">{t('Email us')}</a><span>VPO Kunda, Tehsil Semari,<br />Salumber, Rajasthan</span></div>
+      <div><h4>{t('Quick enquiry')}</h4><p>{t('Need a quote or product information?')}</p><a className="footer-whatsapp" href="https://wa.me/919799857998" target="_blank" rel="noreferrer">{t('Chat on WhatsApp')} ↗</a></div>
+    </div>
+    <div className="container footer-bottom"><span>© 2026 Kanak Building and Materials. {t('All Rights Reserved.')}</span></div>
+  </footer>;
 }

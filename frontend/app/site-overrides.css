@@ -1,0 +1,213 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-links {
+  gap: 22px;
+}
+
+.site-controls,
+.language-controls {
+  display: flex;
+  align-items: center;
+}
+
+.site-controls {
+  gap: 9px;
+}
+
+.language-controls {
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+.language-controls button,
+.theme-toggle {
+  border: 0;
+  cursor: pointer;
+  font: 600 12px 'DM Sans', Arial, sans-serif;
+}
+
+.language-controls button {
+  padding: 5px 7px;
+  border-radius: 3px;
+  color: var(--muted);
+  background: transparent;
+}
+
+.language-controls button.selected {
+  color: #fff;
+  background: var(--navy);
+}
+
+.theme-toggle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--navy);
+  background: var(--cream);
+  font-size: 19px;
+}
+
+html[data-theme='dark'] {
+  --navy: #e8edf4;
+  --navy2: #111923;
+  --muted: #aeb9c8;
+  --line: #354252;
+  --cream: #1c2734;
+  --white: #18222e;
+}
+
+html[data-theme='dark'] body {
+  color: var(--navy);
+  background: #151e29;
+}
+
+html[data-theme='dark'] .site-header,
+html[data-theme='dark'] .trust-strip,
+html[data-theme='dark'] .product-card,
+html[data-theme='dark'] .hero-badge,
+html[data-theme='dark'] .button-outline,
+html[data-theme='dark'] .product-tag,
+html[data-theme='dark'] .delivery-icon,
+html[data-theme='dark'] .values-grid > div,
+html[data-theme='dark'] .enquiry-form input,
+html[data-theme='dark'] .enquiry-form textarea {
+  color: var(--navy);
+  background: #202c3a;
+}
+
+html[data-theme='dark'] .nav-cta,
+html[data-theme='dark'] .button-dark {
+  color: #fff;
+  background: var(--orange);
+}
+
+html[data-theme='dark'] .nav-cta:hover,
+html[data-theme='dark'] .button-dark:hover {
+  background: #d95720;
+}
+
+html[data-theme='dark'] .site-header {
+  border-bottom-color: var(--line);
+}
+
+html[data-theme='dark'] .nav-links {
+  color: #c8d0dc;
+}
+
+html[data-theme='dark'] .button-outline {
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] .theme-toggle {
+  color: #ffca70;
+  background: #293749;
+}
+
+html[data-theme='dark'] .language-controls button.selected {
+  background: var(--orange);
+}
+
+html[data-theme='dark'] .hero-image-wrap:after {
+  background: linear-gradient(90deg, rgba(9, 16, 26, .28), transparent);
+}
+
+html[data-theme='dark'] .image-fallback {
+  color: var(--navy);
+  background: linear-gradient(135deg, #344354, #253342);
+}
+
+html[data-theme='dark'] .enquiry-form input,
+html[data-theme='dark'] .enquiry-form textarea {
+  border-color: var(--line);
+}
+
+html[data-theme='dark'] .enquiry-form input::placeholder,
+html[data-theme='dark'] .enquiry-form textarea::placeholder {
+  color: #9eabba;
+}
+
+html[data-theme='dark'] .menu-button {
+  color: var(--navy);
+}
+
+@media (max-width: 1050px) and (min-width: 651px) {
+  .nav-links {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 760px) and (min-width: 651px) {
+  .site-header {
+    height: 70px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .site-header .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 18px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fff;
+    box-shadow: 0 12px 20px #12233d12;
+  }
+
+  .site-header .nav-links.open {
+    display: flex;
+  }
+
+  .site-header .nav-links > a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-header .nav-links .site-controls {
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-header .nav-links .nav-cta {
+    text-align: center;
+    border: 0;
+    margin-top: 10px;
+  }
+
+  html[data-theme='dark'] .site-header .nav-links {
+    background: #202c3a;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links .site-controls {
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  html[data-theme='dark'] .nav-links {
+    background: #202c3a;
+  }
+}
