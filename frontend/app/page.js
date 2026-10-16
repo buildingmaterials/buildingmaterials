@@ -19,12 +19,12 @@ export default function HomePage() {
           <div className="hero-copy">
             <span className="eyebrow">{t('Trusted building materials partner')}</span>
             <h1>{t('Build better.')} <span>{t('Build with confidence.')}</span></h1>
-            <p className="hero-text">{t('Quality cement, colours, sand, plumbing supplies and construction essentials — delivered with dependable local service in Rajasthan.')}</p>
+            <p className="hero-text">{t('Find cement, paints, roof tiles, waterproofing, plumbing and hardware for your project — with friendly local service and delivery options in Rajasthan.')}</p>
             <div className="button-row">
               <a className="button button-primary" href={`https://wa.me/919799857998?text=${encodeURIComponent(enquiry)}`} target="_blank" rel="noreferrer">{t('Chat on WhatsApp')} <span>↗</span></a>
               <Link className="button button-outline" href="/services">{t('Explore products')}</Link>
             </div>
-            <div className="hero-proof"><strong>22+</strong><span>{t('years of')}<br />{t('trusted service')}</span><i></i><strong>{t('Local')}</strong><span>{t('support &')}<br />{t('home delivery')}</span></div>
+            <div className="hero-proof"><strong>4+</strong><span>{t('years of')}<br />{t('local experience')}</span><i></i><strong>{t('Tractor & tempo')}</strong><span>{t('site delivery')}<br />{t('available locally')}</span></div>
           </div>
           <div className="hero-visual">
             <div className="hero-image-wrap"><ImageWithFallback src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85" alt={t('Modern building under construction')} fallbackLabel={t('Kanak Building Materials')} /></div>
@@ -34,9 +34,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="trust-strip"><div className="container trust-items"><div><span className="trust-symbol">◆</span><strong>{t('Quality products')}</strong><small>{t('Materials you can rely on')}</small></div><div><span className="trust-symbol">◷</span><strong>{t('22+ years experience')}</strong><small>{t('Knowledge that makes a difference')}</small></div><div><span className="trust-symbol">⌂</span><strong>{t('Local convenience')}</strong><small>{t('Easy enquiries and delivery')}</small></div></div></section>
+      <section className="trust-strip"><div className="container trust-items"><div><span className="trust-symbol">◆</span><strong>{t('Quality products')}</strong><small>{t('Materials you can rely on')}</small></div><div><span className="trust-symbol">◷</span><strong>{t('4+ years of experience')}</strong><small>{t('Local experience and helpful service')}</small></div><div><span className="trust-symbol">⌂</span><strong>{t('Tractor and tempo delivery')}</strong><small>{t('Delivery to your site, availability permitting')}</small></div></div></section>
 
-      <section className="section"><div className="container"><div className="section-heading"><div><span className="eyebrow">{t('What we supply')}</span><h2>{t('Everything you need to')} <em>{t('build')}</em></h2></div><Link className="text-link" href="/services">{t('View all products')} <span>→</span></Link></div><div className="product-grid home-products">{products.slice(0, 4).map((product) => <ProductCard key={product.title} product={product} />)}</div></div></section>
+      <section className="section"><div className="container"><div className="section-heading"><div><span className="eyebrow">{t('What we supply')}</span><h2>{t('Everything you need to')} <em>{t('build')}</em></h2></div><Link className="text-link" href="/services">{t('View all products')} <span>→</span></Link></div><div className="product-grid home-products">{products.filter((product) => product.featured).map((product) => <ProductCard key={product.title} product={product} />)}</div></div></section>
 
       <section className="story-band"><div className="container story-grid"><div className="story-image"><ImageWithFallback src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt={t('Construction professionals working on a building project')} fallbackLabel={t('Project planning')} /></div><div className="story-copy"><span className="eyebrow">{t('Why Kanak Building and Materials')}</span><h2>{t('A trusted name for every')} <em>{t('foundation')}</em></h2><p>{t('From a home renovation to a major construction project, we help homeowners, builders and contractors find the right materials with honest guidance and reliable service.')}</p><Link className="button button-dark" href="/about">{t('Our story')} <span>→</span></Link></div></div></section>
       <ReviewsSection />
