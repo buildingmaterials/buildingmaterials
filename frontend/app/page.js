@@ -32,6 +32,13 @@ export default function HomePage() {
             <div className="orange-slash"></div>
           </div>
         </div>
+        <div className="container hero-promo">
+          <ImageWithFallback
+            src="/hero/wall-putty-range.png"
+            alt={t('JK Cement wall putty range of products')}
+            fallbackLabel={t('JK Cement wall putty range of products')}
+          />
+        </div>
       </section>
 
       <section className="trust-strip"><div className="container trust-items"><div><span className="trust-symbol">◆</span><strong>{t('Quality products')}</strong><small>{t('Materials you can rely on')}</small></div><div><span className="trust-symbol">◷</span><strong>{t('4+ years of experience')}</strong><small>{t('Local experience and helpful service')}</small></div><div><span className="trust-symbol">⌂</span><strong>{t('Tractor and tempo delivery')}</strong><small>{t('Delivery to your site, availability permitting')}</small></div></div></section>

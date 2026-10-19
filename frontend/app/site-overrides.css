@@ -256,6 +256,19 @@ html[data-theme='dark'] .menu-button {
   object-fit: contain;
 }
 
+.hero-promo {
+  margin-top: 48px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 16px 36px #12233d18;
+}
+
+.hero-promo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .product-image img[src*="jk-cement-promo"] {
   object-fit: contain;
   background: #f3d69d;
