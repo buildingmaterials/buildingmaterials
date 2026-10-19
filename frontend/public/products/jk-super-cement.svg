@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f1f3f7"/><stop offset="1" stop-color="#dce2ec"/></linearGradient>
+    <linearGradient id="bag" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#d8dfeb"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.8"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#12284e" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <circle cx="98" cy="92" r="105" fill="#fff" opacity=".5"/>
+  <path d="M0 323h600v77H0z" fill="#cbd3df"/>
+  <ellipse cx="300" cy="330" rx="146" ry="22" fill="#6c7e9b" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <path d="m184 96 28-22h176l28 22 18 215-39 20H202l-39-20z" fill="url(#bag)" stroke="#b6c2d2" stroke-width="3"/>
+    <path d="m184 96 28-22h176l28 22-6 37H190z" fill="#173a73"/>
+    <path d="m163 284 39 20h195l37-19 2 26-39 20H202l-39-20z" fill="#173a73"/>
+    <path d="M191 147h218v120H191z" fill="#fff" opacity=".82"/>
+    <path d="M191 153h218v16H191z" fill="#e85b3c"/>
+    <text x="300" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#18376b">JK CEMENT</text>
+    <text x="300" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="#173a73">SUPER</text>
+    <text x="300" y="255" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#e85b3c">CEMENT</text>
+    <path d="M213 279h174" stroke="#c7d0de" stroke-width="2"/>
+    <text x="300" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#445776">STRENGTH THAT LASTS</text>
+  </g>
+  <text x="300" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#53627b">FOR HOMES AND BIGGER PROJECTS</text>
+</svg>

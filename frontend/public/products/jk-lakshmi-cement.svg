@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#edf3f0"/><stop offset="1" stop-color="#d8e5df"/></linearGradient>
+    <linearGradient id="bag" x2="1" y2="1"><stop stop-color="#fffef7"/><stop offset="1" stop-color="#dce7df"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.8"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#243c30" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <circle cx="502" cy="80" r="114" fill="#fff" opacity=".42"/>
+  <path d="M0 323h600v77H0z" fill="#c7d6ce"/>
+  <ellipse cx="300" cy="330" rx="146" ry="22" fill="#879d90" opacity=".32"/>
+  <g filter="url(#shadow)">
+    <path d="m184 96 28-22h176l28 22 18 215-39 20H202l-39-20z" fill="url(#bag)" stroke="#becdc3" stroke-width="3"/>
+    <path d="m184 96 28-22h176l28 22-6 37H190z" fill="#08734b"/>
+    <path d="m163 284 39 20h195l37-19 2 26-39 20H202l-39-20z" fill="#08734b"/>
+    <path d="M191 147h218v120H191z" fill="#fff" opacity=".8"/>
+    <path d="M198 153h204v13H198z" fill="#f2b942"/>
+    <text x="300" y="188" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#18543d">JK LAKSHMI</text>
+    <text x="300" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="800" fill="#183e30">CEMENT</text>
+    <text x="300" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#61756a">STRONG FOUNDATIONS</text>
+    <path d="M213 279h174" stroke="#bfd0c4" stroke-width="2"/>
+    <text x="300" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#43594d">BUILD WITH CONFIDENCE</text>
+  </g>
+  <text x="300" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#53685c">CEMENT FOR EVERYDAY CONSTRUCTION</text>
+</svg>
