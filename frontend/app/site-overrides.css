@@ -353,12 +353,6 @@ html[data-theme='dark'] .menu-button {
   to { opacity: 1; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-slider-frame img {
-    animation: none;
-  }
-}
-
 @media (max-width: 850px) {
   .page-hero-grid {
     grid-template-columns: 1fr 1fr;
