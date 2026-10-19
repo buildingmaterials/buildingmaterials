@@ -27,7 +27,7 @@ export default function HomePage() {
             <div className="hero-proof"><strong>4+</strong><span>{t('years of')}<br />{t('local experience')}</span><i></i><strong>{t('Tractor & tempo')}</strong><span>{t('site delivery')}<br />{t('available locally')}</span></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-wrap"><ImageWithFallback src="/delivery/tempo-loaded-stock.png" alt={t('Building materials being loaded for local delivery')} fallbackLabel={t('Kanak Building Materials')} /></div>
+            <div className="hero-image-wrap hero-campaign-image"><ImageWithFallback src="/products/jk-cement-promo.jpg" alt={t('JK Cement Built Bigger campaign image')} fallbackLabel={t('Kanak Building Materials')} /></div>
             <div className="hero-badge"><span className="badge-icon">✓</span><div><strong>{t('Local delivery')}</strong><small>{t('Tractor and tempo options')}</small></div></div>
             <div className="orange-slash"></div>
           </div>

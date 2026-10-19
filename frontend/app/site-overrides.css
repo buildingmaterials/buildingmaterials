@@ -232,6 +232,39 @@ html[data-theme='dark'] .menu-button {
   font-weight: 700;
 }
 
+.owner-name-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 8px 12px;
+  color: #fff;
+  background: rgba(18, 35, 61, .88);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero-campaign-image {
+  background: #f3d69d;
+}
+
+.hero-campaign-image:after {
+  display: none;
+}
+
+.hero-campaign-image img {
+  object-fit: contain;
+}
+
+.product-image img[src*="jk-cement-promo"] {
+  object-fit: contain;
+  background: #f3d69d;
+}
+
+.floating-actions {
+  justify-content: flex-end;
+}
+
 .delivery-showcase {
   display: grid;
   grid-template-columns: repeat(2, minmax(110px, 150px)) minmax(180px, 260px) minmax(220px, 1fr);
