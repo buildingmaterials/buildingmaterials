@@ -2,7 +2,6 @@
 
 import ProductCard from '../../components/ProductCard';
 import ImageWithFallback from '../../components/ImageWithFallback';
-import PageHero from '../../components/PageHero';
 import { products } from '../../lib/siteData';
 import { useSitePreferences } from '../../components/SitePreferences';
 
@@ -12,13 +11,7 @@ export default function ServicesPage() {
     ? 'नमस्ते, मुझे निर्माण सामग्री चुनने में मदद चाहिए।'
     : 'Hello, I need help choosing building materials.';
   return <>
-    <PageHero
-      eyebrow={t('Our range')}
-      title={<>{t('Materials for every stage of your')} <em>{t('build.')}</em></>}
-      description={t('Explore dependable products for construction, renovation and home improvement. Ask us about availability, pricing and delivery.')}
-      image="/products/jk-lakshmi-cement.jpg"
-      imageAlt={t('Bag of JK Lakshmi Green+ Cement')}
-    />
+    <section className="page-hero"><div className="container narrow"><span className="eyebrow">{t('Our range')}</span><h1>{t('Materials for every stage of your')} <em>{t('build.')}</em></h1><p>{t('Explore dependable products for construction, renovation and home improvement. Ask us about availability, pricing and delivery.')}</p></div></section>
     <section className="section"><div className="container"><div className="product-grid all-products">{products.map((product) => <ProductCard key={product.title} product={product} />)}</div></div></section>
     <section className="delivery-note"><div className="container delivery-showcase">
       <div className="delivery-vehicle"><img src="/delivery/tractor.svg" alt="" /><span>{t('Tractor delivery')}</span></div>

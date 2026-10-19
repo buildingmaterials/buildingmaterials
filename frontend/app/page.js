@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import ProductCard from '../components/ProductCard';
 import ImageWithFallback from '../components/ImageWithFallback';
-import HeroSlider from '../components/HeroSlider';
 import ReviewsSection from '../components/ReviewsSection';
 import { products } from '../lib/siteData';
 import { useSitePreferences } from '../components/SitePreferences';
@@ -27,7 +26,18 @@ export default function HomePage() {
             </div>
             <div className="hero-proof"><strong>4+</strong><span>{t('years of')}<br />{t('local experience')}</span><i></i><strong>{t('Tractor & tempo')}</strong><span>{t('site delivery')}<br />{t('available locally')}</span></div>
           </div>
-          <HeroSlider />
+          <div className="hero-visual">
+            <div className="hero-image-wrap hero-campaign-image"><ImageWithFallback src="/products/jk-cement-promo.jpg" alt={t('JK Cement Built Bigger campaign image')} fallbackLabel={t('Kanak Building Materials')} /></div>
+            <div className="hero-badge"><span className="badge-icon">✓</span><div><strong>{t('Local delivery')}</strong><small>{t('Tractor and tempo options')}</small></div></div>
+            <div className="orange-slash"></div>
+          </div>
+        </div>
+        <div className="container hero-promo">
+          <ImageWithFallback
+            src="/hero/wall-putty-range.png"
+            alt={t('JK Cement wall putty range of products')}
+            fallbackLabel={t('JK Cement wall putty range of products')}
+          />
         </div>
       </section>
 
